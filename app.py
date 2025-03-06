@@ -6,7 +6,7 @@ import numpy as np
 # Load the trained model
 model = joblib.load("sohna_price_model.pkl")
 
-# Social media icons at the top right
+# Social media icons at the top right (High-Quality Professional Icons)
 st.markdown(
     """
     <style>
@@ -21,13 +21,22 @@ st.markdown(
     </style>
     <div class="icon-container">
         <a href="https://github.com/deepanshu4764" target="_blank">
-            <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png" alt="GitHub"/>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="35" alt="GitHub"/>
         </a>
         <a href="https://www.linkedin.com/in/deepanshu4764" target="_blank">
-            <img src="https://img.icons8.com/ios-filled/30/000000/linkedin.png" alt="LinkedIn"/>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="35" alt="LinkedIn"/>
         </a>
         <a href="https://twitter.com/deepanshu4764" target="_blank">
-            <img src="https://img.icons8.com/ios-filled/30/000000/twitter.png" alt="Twitter"/>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" width="35" alt="Twitter"/>
+        </a>
+        <a href="https://www.instagram.com/deepanshu4764" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="35" alt="Instagram"/>
+        </a>
+        <a href="https://www.youtube.com/@deepanshu4764" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_social_white_squircle_%282017%29.svg" width="35" alt="YouTube"/>
+        </a>
+        <a href="https://chat.whatsapp.com/deepanshu4764" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="35" alt="WhatsApp Community"/>
         </a>
     </div>
     """,
