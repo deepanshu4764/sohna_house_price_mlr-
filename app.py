@@ -6,31 +6,34 @@ import numpy as np
 # Load the trained model
 model = joblib.load("sohna_price_model.pkl")
 
-# Page Config
-st.set_page_config(page_title="Sohna House Price Predictor", page_icon="🏡")
-
-# Custom Styling
-st.markdown("""
+# Social media icons at the top right
+st.markdown(
+    """
     <style>
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .social-icons a {
-            margin: 0 10px;
-            text-decoration: none;
-            font-size: 20px;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 14px;
-        }
+    .icon-container {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .icon-container a {
+        margin-left: 10px;
+    }
     </style>
-""", unsafe_allow_html=True)
+    <div class="icon-container">
+        <a href="https://github.com/deepanshu4764" target="_blank">
+            <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png" alt="GitHub"/>
+        </a>
+        <a href="https://www.linkedin.com/in/deepanshu4764" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/30/000000/linkedin.png" alt="LinkedIn"/>
+        </a>
+        <a href="https://twitter.com/deepanshu4764" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/30/000000/twitter.png" alt="Twitter"/>
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
-# Main Title
 st.title("🏡 Sohna House Price Predictor (MLR Model)")
 st.write("📊 This app predicts house prices using a trained Multiple Linear Regression model.")
 
@@ -47,28 +50,4 @@ if st.button("Predict Price"):
     predicted_price = model.predict(input_data)
     st.success(f"🏠 Estimated House Price: ₹{predicted_price[0]:,.2f}")
 
-# Sidebar Branding
-st.sidebar.title("🔗 Connect with Me")
-st.sidebar.markdown("""
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Deepanshu-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/YOUR_LINK)
-[![GitHub](https://img.shields.io/badge/GitHub-Deepanshu-black?style=flat&logo=github)](https://github.com/YOUR_GITHUB)
-[![Twitter](https://img.shields.io/badge/Twitter-Deepanshu-blue?style=flat&logo=twitter)](https://twitter.com/YOUR_TWITTER)
-[![Instagram](https://img.shields.io/badge/Instagram-Deepanshu-purple?style=flat&logo=instagram)](https://instagram.com/YOUR_INSTAGRAM)
-""", unsafe_allow_html=True)
-
-# Social Media Links (Centered)
-st.markdown("""
-<div class="social-icons">
-    <a href="https://www.linkedin.com/in/YOUR_LINK" target="_blank">🔗 LinkedIn</a>
-    <a href="https://github.com/YOUR_GITHUB" target="_blank">💻 GitHub</a>
-    <a href="https://twitter.com/YOUR_TWITTER" target="_blank">🐦 Twitter</a>
-    <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank">📸 Instagram</a>
-</div>
-""", unsafe_allow_html=True)
-
-# Footer
-st.markdown("""
-<div class="footer">
-    🚀 Made with ❤️ by <b>Deepanshu</b> | Follow me for more projects!
-</div>
-""", unsafe_allow_html=True)
+st.markdown("### 🔹 Made by **Deepanshu**")
